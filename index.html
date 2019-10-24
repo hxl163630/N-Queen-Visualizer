@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>N Queens Visualizer</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    </script>
+    <link rel="stylesheet" href="public/styling/cssBasic.css">
+    <script src="public/js/myscripts.js"></script>
+    </head>
+    <body onload = "boardCreate(4);">
+        <div class="container"  style="background-color: lightblue">
+            <div class="container">
+              <div class="jumbotron">
+                <h1 class="text-center"> N Queens Puzzle Visualizer </h1>
+                <p>The <b>n queens puzzle</b> is the problem of placing n chess queens on an n by n chessboard so that no two queens threaten each other;
+                     thus, a solution requires that no two queens share the same row, column, or diagonal. For futher infomation,
+                     please check <a href="https://en.wikipedia.org/wiki/Eight_queens_puzzle">here</a>
+                 </p>
+                 <p>
+                     This application visualize the <b>Depth-first search (DFS)</b> algorithm which solve the n queens puzzle step by step with <b>COOL</b> animations.
+                 </p>
+              </div>
+            <div class="container" id = "mainText">
+
+                <div class="row" >
+                    <!-- <div class="col-4" style="border-width: 9px;  border-style: solid;  border-color: cyan;"> -->
+                    <div class="col-4" id = "inputContainer">
+                        <div class="row" >
+                            <div class="col-4">
+                                <h5 title="Input N number"> N:</h5>
+                            </div>
+                            <div class="col-8">
+                                <input type="range" min="4" max="12" id="nInput" value = 4 oninput="nOutput.value = nInput.value">
+                                <output id="nOutput">4</output>
+                                <!-- <input type="number" name="n" id="n" value = 8><br> -->
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-4">
+                                <h6 title="Change the DFS animination step time (In MiliSeconds) ">Animation step time:</h6>
+                            </div>
+                            <div class="col-8">
+                                <input type="number" name="time" id = "time" step = "100" min = "0" value = 1000><br>
+                            </div>
+                        </div>
+                        <button onclick="boardCreate(document.getElementById('nInput').value)" title="Generate new board">Create Board</button>
+                        <button onclick="nQueens(document.getElementById('nInput').value)" title="Solve the puzzle!">Solve</button>
+                        <button onclick="stopFunc()" title="stop the animation :P">Stop Animation</button><br><br>
+                    </div>
+                    <div class="col-8" id = "boardContainer">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div><br>
+
+    </div>
+        <footer class="container text-center">
+          <p>H.L. 2019</p>
+      </footer>
+    </body>
+</html>

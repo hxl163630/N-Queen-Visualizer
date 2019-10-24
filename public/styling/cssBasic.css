@@ -1,0 +1,58 @@
+td {
+
+    border: 1px solid rgb(175, 216, 248);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.unvisited{
+    background-color: white;
+
+}
+
+.queens{
+    background-color: white;
+    background: url("../imgs/queen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.occupied{
+    background-color: pink;
+}
+
+
+
+.resultRow:hover{
+    border: 3px solid red;
+}
+
+
+
+#result {
+    width: 100%; /* Optional */
+}
+
+#result tbody,
+#result thead { display: block; }
+
+#result tbody {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+footer {
+    padding: 15px;
+    background-color: #777;
+    text-align: center;
+    color: white;
+    height: 60px;
+}
+
+footer p{
+  margin-bottom: 15px;
+}
