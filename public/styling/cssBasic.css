@@ -41,7 +41,7 @@ td {
 #result thead { display: block; }
 
 #result tbody {
-    max-height: 500px;
+    max-height: 340px;
     overflow-y: auto;
 }
 

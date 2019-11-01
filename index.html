@@ -30,13 +30,13 @@
 
                 <div class="row" >
                     <!-- <div class="col-4" style="border-width: 9px;  border-style: solid;  border-color: cyan;"> -->
-                    <div class="col-4" id = "inputContainer">
+                    <div class="col-5" id = "inputContainer">
                         <div class="row" >
                             <div class="col-4">
                                 <h5 title="Input N number"> N:</h5>
                             </div>
                             <div class="col-8">
-                                <input type="range" min="4" max="12" id="nInput" value = 4 oninput="nOutput.value = nInput.value">
+                                <input type="range" min="4" max="10" id="nInput" value = 4 oninput="nOutput.value = nInput.value">
                                 <output id="nOutput">4</output>
                                 <!-- <input type="number" name="n" id="n" value = 8><br> -->
                             </div>
@@ -53,7 +53,7 @@
                         <button onclick="nQueens(document.getElementById('nInput').value)" title="Solve the puzzle!">Solve</button>
                         <button onclick="stopFunc()" title="stop the animation :P">Stop Animation</button><br><br>
                     </div>
-                    <div class="col-8" id = "boardContainer">
+                    <div class="col-7" id = "boardContainer">
                     </div>
 
 
